@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+
+body{
+    background-color: #222222;
+    color: white;
+    margin: 20px 0 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+textarea, input[type="number"]{
+    background-color: #333333;
+    border: 1px solid #666;
+    color: white;
+    margin: 15px 0;
+}
+
+textarea{
+    padding: 10px;
+    width: 20em;
+    height: 5em;
+    display: block;
+    font-family: 'Source Code Pro', monospace;
+}
+
+input[type="number"]{
+    width: 7em;
+    padding: 3px;
+    margin: 0 15px;
+}
+
+textarea:hover, input[type="number"]:hover{
+    border: 1px solid #ffa6008e;
+    outline: none;
+}
+
+textarea:focus, input[type="number"]:focus{
+    border: 1px solid orange;
+    outline: none;
+}
+
+svg{
+    fill:white;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+svg:hover{
+    fill: #ffa6008e;
+}
+
+#plus{
+    margin: 1em 1em 0 6.5em;
+}
+
+#minus{
+    margin: 1em 6.5em 0 1em;
+}
+
+#minus.disabled, #minus.disabled:hover{
+    fill: gray;
+    cursor: inherit;
+}
+
+.submit_form{
+    margin: 0 0 0 30px;
+}
+
+.submit{
+    color: white;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 1px solid #666;
+    border-radius: 50%;
+    outline: none;
+    margin: 20px 0 30px 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.submit:hover{
+    border: 1px solid #ffa6008e;
+}
+
+.submit:focus{
+    border: 1px solid orange;
+}
+
+#secondary{
+    margin: 40px 0 0 0;
+}
+
+dl{
+    margin-top: 40px;
+}
+
+dd{
+    margin-left: 0;
+}
+
+#result{
+    width: 20em;
+    height: 15em;
+}
+
+@media screen and (min-width: 768px) {
+
+    body {
+        display: block;
+    }
+
+    #content{
+        display: flex;
+    }
+
+    #secondary{
+        margin: 0 0 0 80px;
+    }
+
+    #result{
+        width: 40em;
+        height: 20em;
+    }
+}
+
+
+.ripple{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffa600e1;
+    z-index: 5;
+    pointer-events: none;
+
+    animation-name: fadeOut;
+    animation-duration: .5s;
+    animation-fill-mode:none;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity:1;
+        width: 0px;
+        height: 0px;
+        border: none;
+    }
+
+    40% {
+        opacity: .3;
+    }
+
+    100% {
+        opacity:0;
+        width: 100px;
+        height: 100px;
+        transform:translateX(-50px) translateY(-50px);
+    }
+}
+
+#clip{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 5px;
+    outline: none;
+    width: 64px;
+    height: 24px;
+    margin: 10px 0 0 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#clip:hover{
+    border: 1px solid #ffa6008e;
+}
+
+#clip:focus{
+    border: 1px solid orange;
+}
